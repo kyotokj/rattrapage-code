@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Odyssée Stellaire</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  
   <!-- Header avec navigation -->
+
+  <div id="particles-js"></div>
   <header>
     <div class="container">
-      <h1>Odyssée Stellaire</h1>
+      <img class="logo" src="./assets/logo.svg" alt="">
       <nav id="nav">
         <ul>
           <li><a href="#intro">Accueil</a></li>
@@ -29,41 +34,60 @@
   </header>
 
   <!-- Contenu principal (scrollitelling interactif) -->
+ 
   <main>
+   
     <!-- Section Accueil -->
+   
     <section id="intro" class="section">
       <div class="content">
         <h2>Bienvenue dans l'Odyssée Stellaire</h2>
-        <p>Parcourez l'histoire fascinante de l'évolution des étoiles, de leur naissance à leur destin final, dans une expérience immersive et interactive.</p>
+        <p>Parcourez l'histoire fascinante de l'évolution des étoiles, de leur naissance à leur destin final, dans une
+          expérience immersive et interactive.</p>
       </div>
     </section>
 
     <!-- Section Naissance d'une étoile -->
+
     <section id="naissance" class="section">
+      <img class="illustration" src="./assets/AmaSté.png" alt="Amat Stélaire">
       <div class="content">
         <h2>Naissance d'une Étoile</h2>
-        <p>Les étoiles naissent au cœur des nébuleuses. Sous l'effet de la gravité, les nuages de gaz et de poussières se condensent pour former des proto-étoiles, annonçant le début d'une vie lumineuse.</p>
+        <p>Les étoiles naissent au cœur des nébuleuses. Sous l'effet de la gravité, les nuages de gaz et de poussières
+          se condensent pour former des proto-étoiles, annonçant le début d'une vie lumineuse.</p>
       </div>
     </section>
 
+
     <!-- Section Vie d'une étoile -->
+
     <section id="vie" class="section">
+      <img class="illustration" src="./assets/ÉtoileJaune.png" alt="étoile">
       <div class="content">
         <h2>Vie d'une Étoile</h2>
-        <p>Une fois formée, une étoile évolue sur la séquence principale, fusionnant l'hydrogène en hélium et produisant une énergie phénoménale. La stabilité et la durée de vie dépendent de sa masse et de ses caractéristiques internes.</p>
+        <p>Une fois formée, une étoile évolue sur la séquence principale, fusionnant l'hydrogène en hélium et produisant
+          une énergie phénoménale. La stabilité et la durée de vie dépendent de sa masse et de ses caractéristiques
+          internes.</p>
       </div>
     </section>
 
     <!-- Section Fin de vie d'une étoile -->
+
     <section id="fin" class="section">
+      <img class="illustration" src="./assets/NaineBlanche.png" alt="Naine blanche">
       <div class="content">
         <h2>Fin de Vie</h2>
-        <p>Quand l'hydrogène s'épuise, l'étoile amorce sa transformation : expansion en géante rouge, suivie d'une fin spectaculaire par explosion en supernova ou l'apparition d'un objet compact tel qu'une naine blanche ou un trou noir.</p>
+        <p>Quand l'hydrogène s'épuise, l'étoile amorce sa transformation : expansion en géante rouge, suivie d'une fin
+          spectaculaire par explosion en supernova ou l'apparition d'un objet compact tel qu'une naine blanche ou un
+          trou noir.</p>
       </div>
     </section>
 
+
+
     <!-- Section Contact -->
-    <section id="contact" class="section">
+
+    <section id="contact">
       <div class="content">
         <h2>Contactez-nous</h2>
         <form id="contactForm">
@@ -83,11 +107,9 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Odyssée Stellaire - Tous droits réservés</p>
-  </footer>
-
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
+
 </body>
+
 </html>

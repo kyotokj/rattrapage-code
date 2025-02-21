@@ -3,27 +3,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
   font-family: 'Helvetica', sans-serif;
   background-color: #000;
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.4;
+  cursor: none;
 }
 
 /* Header et navigation */
+
 header {
-  background: rgba(0, 0, 0, 0.85);
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
-  padding: 1rem 0;
+  z-index: 2;
+  padding: 1.5rem 0;
 }
 
 header .container {
-  width: 90%;
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -46,32 +47,32 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: rgb(118, 111, 139);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #f90;
+  color: #eaeaea;
 }
 
+.logo {
+  width: 15%;
+}
+
+
 /* Burger menu */
+
 .burger {
   display: none;
   flex-direction: column;
   cursor: pointer;
 }
 
-.burger .line {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  margin: 4px 0;
-}
 
 /* Sections pour scrollitelling */
 .section {
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +80,7 @@ nav ul li a:hover {
   padding: 3rem 2rem;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 2s ease;
 }
 
 .section.visible {
@@ -87,26 +88,9 @@ nav ul li a:hover {
   transform: translateY(0);
 }
 
-/* Arrière-plans des sections - utilisez vos images ou remplacez-les par des placeholders */
-#intro {
-  background: url('https://via.placeholder.com/1500x1000?text=Bienvenue+dans+l%27Odyss%C3%A9e+Stellaire') no-repeat center center/cover;
-}
-#naissance {
-  background: url('https://via.placeholder.com/1500x1000?text=Naissance+d%27une+%C3%89toile') no-repeat center center/cover;
-}
-#vie {
-  background: url('https://via.placeholder.com/1500x1000?text=Vie+d%27une+%C3%89toile') no-repeat center center/cover;
-}
-#fin {
-  background: url('https://via.placeholder.com/1500x1000?text=Fin+de+Vie') no-repeat center center/cover;
-}
-#contact {
-  background: #111;
-}
 
 /* Contenu intérieur des sections */
 .content {
-  background: rgba(0, 0, 0, 0.65);
   padding: 2rem;
   border-radius: 10px;
   max-width: 800px;
@@ -114,16 +98,45 @@ nav ul li a:hover {
 }
 
 .content h2 {
+  color: #eaeaea;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .content p {
+  color: #eaeaea;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
+.illustration {
+  position: absolute;
+  top: 35%;
+  width: 70%;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 3s ease-in-out, transform 4s;
+  z-index: -1;
+}
+
+.illustration.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Formulaire de contact */
+
+#contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #16161f;
+  cursor: auto;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -146,15 +159,16 @@ form textarea {
 }
 
 form button {
-  background: #f90;
+  background: rgb(71, 66, 162);
   border: none;
   padding: 0.8rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
+  color: #eaeaea;
 }
 
 form button:hover {
-  background: #e68a00;
+  background: rgb(97, 93, 181);
 }
 
 #formFeedback {
@@ -162,12 +176,15 @@ form button:hover {
   font-size: 0.9rem;
 }
 
-/* Footer */
-footer {
-  background: #111;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+/* BG Constellation */
+
+#particles-js {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  color: #d1d2ff;
 }
 
 /* Responsive Design */
@@ -177,19 +194,18 @@ footer {
     position: absolute;
     top: 60px;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
     width: 200px;
     display: none;
   }
-  
+
   nav ul.active {
     display: block;
   }
-  
+
   nav ul li {
     margin: 1rem 0;
   }
-  
+
   .burger {
     display: flex;
   }
